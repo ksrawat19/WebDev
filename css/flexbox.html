@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flexbox{
+          display: flex;
+          /* gap: 30px; */
+          background-color: bisque;
+          border: 2px solid black;
+          width: 500px;
+          height: 200px;
+          margin: 20px 0;
+        }
+        .box1{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            border: 2px solid rgb(91, 91, 91);
+        }
+        #flex1{
+            flex-direction: row;
+        }
+        #flex2{
+            flex-direction: column;
+        }
+        #flex3{
+            flex-direction: column-reverse;
+        }
+        #flex4{
+            flex-direction: row-reverse;
+        }
+        #flex5{
+            flex-wrap:  wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color: yellow; width: 300px; text-align: center;">Flex Box</h1>
+    
+    <div id="flex0"  class="flexbox">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+    </div>
+    <h2 style="background-color: yellow; width: 300px; text-align: center;">Flex Direction</h2>
+    
+    <div id="flex1"  class="flexbox">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+    </div>
+    
+    <div id="flex2" class="flexbox">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+    </div>
+    
+    <div id="flex3"  class="flexbox">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+    </div>
+    
+    <div id="flex4"  class="flexbox">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+    </div>
+
+    <h2 style="background-color: yellow; width: 300px; text-align: center;">Flex Wrap</h2>
+    <div id="flex5"  class="flexbox">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+        <div class="box1">4</div>
+        <div class="box1">5</div>
+        <div class="box1">6</div>
+        <div class="box1">7</div>
+    </div>
+
+    <h2 style="background-color: yellow; width: 300px; text-align: center;">**Flex flow property is shorthand property of flex wrap and direction</h2>   
+    <p>There are Many More properties like justify content and align item etc differnt properties for parent box and child boxes</p>
+</body>
+</html>

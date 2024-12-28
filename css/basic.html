@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <style>
+        /* Container 1 */
+        #container1{
+            width: 300px;
+            height: 600px;
+            background-color: aliceblue;
+            padding: 40px;
+            border: 2px solid black;
+        }
+        h1{
+            background-color: yellow;
+        }
+        h4{
+            margin: 0;
+        }
+        i{
+            color: red;
+        }
+        pre,
+        #code,
+        .code{
+            color: white;
+            background-color: black;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /* Container 2 */
+        #container2{
+            width: 400px;
+            margin: 75px 0;
+            border: 2px solid black;
+            padding: 40px;
+            background-color: aliceblue;
+        }
+        #container2 p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: antiquewhite;
+            font-weight: 600;
+        }
+        .b1,
+        .t1{
+            border: 2px solid red;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 6px;
+            background-color: aquamarine;
+            transition: 0.5s;
+        }
+        #t1{
+            text-align: center;
+            color: gray;
+        }
+        #b1:hover{
+            background-color: red;
+            color: yellow;
+        }
+        #t1:focus{
+            background-color: yellow;
+            color: red;
+        }
+        /* Box Model */
+        #Margin{
+            background-color: #F7CCA1;
+            padding: 60px;
+            width: 400px;
+        }
+        #Border{
+            background-color: #FBDC9E;
+            padding: 25px;
+        }
+        #Padding{
+            background-color: #C2CF8D;
+            padding: 40px;
+        }
+        #Content{
+            background-color: #8DB6C1;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- element selector -->
+    <div id="container1">
+        <h1>Element Selector</h1>
+        <h4><i>Element selector basically select element/tag directly,select elements based on name, id, class</i></h4>
+        <h4><i>example - Select By Name:</i></h4>
+
+        <div id="block">
+            <pre>p {
+            text-align: center;
+            color: red;
+          }</pre>
+
+            <h4 style="margin-top: 34px;">Example : ID Selecotor</h4>
+            <pre id="code">#para1 {
+            text-align: center;
+            color: red;
+          }</pre>
+
+            <h4>Example : class Selecotor</h4>
+            <pre class="code">.para1 {
+            text-align: center;
+            color: red;
+          }</pre>
+        </div>
+    </div>
+    <!-- psedo classes selector -->
+    <div id="container2">
+        <h1>Pseudo Class Selector</h1>
+        <p>A pseudo-class is used to define a special state of an element.</p>
+        <p>For example, it can be used to:</p>
+
+        <ul>
+            <li>Style an element when a user mouses over it</li>
+            <li>Style visited and unvisited links differently</li>
+            <li>Style an element when it gets focus</li>
+        </ul>
+
+        <button id="b1" class="b1">Mouse Over Me</button>
+        <input type="text" placeholder="Click Me To Get Focus" id="t1" class="t1"></input>
+    </div>
+    <!-- Box Model -->
+     <div id="Margin">
+        Margin
+        <div id="Border">
+            Border
+            <div id="Padding">
+                Padding
+                <div id="Content">
+                    Content
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--  -->
+</body>
+</html>
