@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Cal</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #wrapper{
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eeeeee;
+        }
+        form{
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <main id="main">
+        <div id="wrapper">
+            <form>
+                <label for="height">Height</label>
+                <input type="text" id="height" autocomplete="off">
+    
+                <label for="weight">Weight</label>
+                <input type="text" id="weight" autocomplete="off">
+    
+                <button id="submit" style="width: 220px;">calculate</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const calculate = document.querySelector('#submit');
+        const wrapper = document.querySelector('#wrapper');
+        const main = document.querySelector('#main');
+        calculate.addEventListener('click', (event)=>{
+            event.preventDefault();
+            const height = parseInt(document.querySelector('#height').value);
+            const weight = parseInt(document.querySelector('#weight').value);
+            
+            const BMI = (weight / (height*height)*10000).toFixed(2);
+            const result = document.createElement('p');
+            result.innerText = `BMI = ${BMI} kg/m2 `;
+            result.style.cssText = ("fontWeight: bold; text-align: center");
+            main.appendChild(result);
+        });
+
+    </script>
+</body>
+</html>
