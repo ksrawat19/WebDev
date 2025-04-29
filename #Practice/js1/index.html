@@ -6,27 +6,51 @@
     <title>Document</title>
     <style>
         #wrapper{
-            height: 100vh;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .box{
-            width: 100px;
-            height: 100px;
+            width: 18rem;
+            height: 10rem;
             border: 2px solid black;
             margin: 12px;
             cursor: pointer;
         }
+        #userWish{
+            height: 12vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            font-size: x-large;
+        }
+        #userInput p {
+            margin-top: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        #userInput p.invalid {
+            color: red;
+        }
+
     </style>
 </head>
 <body>
-    <main id="wrapper">
+    <div id="wrapper">
         <div id="grey" class="box"></div>
         <div id="pink" class="box"></div>
         <div id="skyblue" class="box"></div>
         <div id="orange" class="box"></div>
-    </main>
+    </div>
+    <div id="userInput">
+        <div id="userWish">
+            <label for="userColor">Color: </label>
+            <input type="text" name="" id="userColor" placeholder="desired color" autocomplete="off">
+            <button id="apply">apply</button>
+        </div>
+    </div>
 
     <script>
         // const boxes = document.querySelectorAll('.box');
@@ -55,6 +79,35 @@
                 body.style.backgroundColor = color;
             }
         });
+        // 
+        const apply = document.getElementById('apply');
+        const userColor = document.getElementById('userColor');
+        const userInput = document.getElementById('userInput');
+        const reply = document.createElement('p');
+        function handleUserColor(event){
+            event.preventDefault();
+            const color = userColor.value.trim();
+            
+            // Remove any existing reply before appending a new one
+            if (reply.parentNode) reply.remove();  
+
+            if(CSS.supports('color', color)){
+                reply.innerText =  `${color} applied!`;
+                body.style.backgroundColor = color;
+            }else{
+                reply.innerText =  `Invalid color ${color}`;
+            }
+            const userWish = document.querySelector('#userWish');
+            reply.style.textAlign = 'center';
+            userInput.appendChild(reply);
+        }
+        apply.addEventListener('click', handleUserColor);
+        userColor.addEventListener('keydown', (event)=>{
+            if(event.key==='Enter'){
+                handleUserColor(event);
+            }
+        });
+
     </script>
 </body>
 </html>
