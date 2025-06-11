@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Dance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <!-- heading -->
+    <header>
+        <h1>Sticky Header</h1>
+    </header>
+    
+    <!-- unordered-list -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#flex">Flex</a></li>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#form">Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- flex-box -->
+    <section class="flex-box">
+        <div class="item-1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="item-4">4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+
+    <!-- grid -->
+    <div class="grid-1">
+        <div class="header">header</div>
+        <div class="main">main</div>
+        <div class="sidebar">aside</div>
+        <div class="footer">footer</div>
+    </div>
+
+    <div class="grid-auto">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+
+    <div class="grid-span">
+        <div class="item-1">1</div>
+        <div class="item-2">2</div>
+        <div class="item-3">3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <!-- box & position -->
+    <div class="box-model">Box Model</div>
+    <div class="relative-box">Relative</div>
+    <div class="absolute-box">Absolute</div>
+    <div class="fixed-box">Fixed</div>
+
+    <!-- animation & transition -->
+    <div class="animated-box"></div>
+    <div class="transition">Hover me</div>
+    <div class="transition-shorthand">Hover me</div>
+
+    <!-- typography & text formaing -->
+    <article class="text">
+        <h2>Typography hehe:)</h2>
+        <p>This is <em>italic</em>,<del>del</del>, <strong>bold</strong>, <mark>mark</mark>, <abbr title="Abbreviation">abbr</abbr>, <code>code()</code>, <var>x</var><sub>2</sub><sup>3</sup>.</p>
+        <blockquote cite="google.com">This is a blockquote example.</blockquote>
+    </article>
+
+    <!-- Float Example -->
+    <div class="float-demo">Floating Box</div>
+    <p>This paragraph flows around the floating box.</p>
+
+    <!-- Cursor & Pointer Events Example -->
+    <div class="pointer-demo">Hover over me (Crosshair Cursor)</div>
+
+    <!-- Resize Example -->
+    <div class="resize-demo">
+        Resize this box by dragging its corner!
+    </div>
+
+    <!-- lists -->
+    <h2>List</h2>
+    <h3>Ordered list</h3>
+    <ol>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+    </ol>
+    <h3>Definition list</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>A markup language used for structuring web content.</dd>
+
+        <dt>CSS</dt>
+        <dd>A stylesheet language used for styling web pages.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>A programming language used for dynamic web interactions.</dd>
+    </dl>
+
+    <!-- table -->
+    <h2>Table</h2>
+    <table class="table">
+        <caption>Table using HTML</caption>
+        <thead>
+            <tr>
+                <th>Col A</th>
+                <th>Col B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>K</td>
+                <td>S</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Footer</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- details -->
+    <details>
+        <summary>Read More Details</summary>
+        <p>what details you are talking about? Are you freak!!</p>
+    </details>
+
+    <!-- form -->  
+    <h2 id="form-h">Form</h2> 
+    <form action="">
+        <fieldset>
+            <!-- label-> for and input -> id should same -->
+            <legend>Your Info </legend>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+
+            <label for="name">email: </label>
+            <input type="text" name="email" id="email" placeholder="Enter Email">
+
+            <label for="name">Age: </label>
+            <input type="number" name="age" id="age">
+
+            <label for="birth-data">Birth Date:</label>
+            <input type="date" name="" id="">
+
+            <label for="fav-col">Fav Color:</label>
+            <input type="color" name="" id="">
+
+            <label for="volume">Volume:</label>
+            <input type="range" name="" id="">
+
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id=""></textarea>
+
+            <label for="car">Choose car:</label>
+            <select name="" id="">
+                <optgroup label="German">
+                    <option value="">Volvo</option>
+                    <option value="">BMW</option>
+                </optgroup>
+                <optgroup label="Japanese">
+                    <option value="">Toyota</option>
+                    <option value="">Hyundai</option>
+                </optgroup>
+            </select>
+
+            <datalist id="browsers">
+                <option value="hehe">Chrome</option>
+                <option value="hehe">Opera</option>
+                <option value="hehe">Brave</option>
+                <!-- don't leave value empty either no value or if writing then fill them -->
+            </datalist>
+            <label for="browser">Browser: </label>
+            <input list="browsers" id="browser">
+
+            <label for="output">Output (Volume): </label>
+            <output>50</output>
+
+            <label for="progress">Progress: </label>
+            <progress max="100" value="72"></progress>
+
+            <label for="meter">meter: </label>
+            <meter min="0" max="100" value="46"></meter>
+
+            <button type="submit">Submit</button>
+
+        </fieldset> 
+    </form>
+
+    <!-- media and embeds -->
+    <h3>figure</h3>
+    <figure>
+        <img src="https://placehold.co/150" alt="figure">
+        <figcaption>figure</figcaption>
+    </figure>
+
+    <h3>picture</h3>
+    <picture>
+        <source srcset="https://placehold.co/300" media="(min-width:500px)">
+        <!-- more than 1 sources can here if 1 file not playing then another -->
+        <img src="https://placehold.co/150" alt="Responsive">
+    </picture>
+
+    <h3>video</h3>
+    <video width="320" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <track kind="subtitles" srclang="en" label="EN" src="subtitles.vtt">
+    </video>
+
+    <h3>audio</h3>
+    <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    </audio>
+
+    <h3>object</h3>
+    <object data="sample.pdf" type="application/pdf" width="100%" height="300">PDF fallback</object>
+
+    <h3>embed</h3>
+    <embed src="sample.svg" type="image/svg+xml" width="200" height="100">
+
+    <h3>canvas</h3>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+
+    <!-- footer & address -->
+    <footer>
+        <address>
+            <label for="Contact">Contact : </label>
+            <a href="mailto:chemistry11first@gmail.com">E-mail Address</a>
+            <br>
+            Copyright©<time datetime="2025">2025</time> by Rawat Data. All Rights Reserved.
+        </address>
+    </footer>
+
+    <!-- js script -->
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "orange";
+        ctx.fillRect(50, 30, 100, 60); // Draws a blue rectangle
+    </script>
+</body>
+</html>
