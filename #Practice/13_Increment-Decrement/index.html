@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incre-Decre</title>
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-bottom: 2px solid #ccc;
+        }
+        main{
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+        }
+        .div1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .div1 p{
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .div1 button{
+            font-size: medium;
+            padding: 0.2rem 0.9rem;
+        }
+        .div2 section{
+            margin: 1rem 0;
+        }
+        .div2 button{
+            font-size: medium;
+            padding: .5rem 0.8rem;
+        }
+        .div2 input{
+            font-size: medium;
+            padding: .5rem 0.8rem;
+        }
+        footer{
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Increment-Decrement</h1>
+    </header>
+    <main>
+        <div class="div1">
+            <button id="increment">++</button>
+            <p id="display">0</p>
+            <button id="decrement">--</button>
+        </div>
+        <div class="div2">
+            <section><input type="number" placeholder="Increment by Value"> <button  onclick="rangeIncrement()" >update</button></section> 
+            <section><input type="number" placeholder="Decrement by Value"> <button  onclick="rangeDecrement()" >update</button></section> 
+            <button id="clear">clear</button>
+        </div>
+    </main>
+    <footer>
+        <h3>Powered by KsRawat19.</h3>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
