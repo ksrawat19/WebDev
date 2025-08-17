@@ -11,8 +11,10 @@ const App = () => {
 
     return (
         <div>
-            <Data.Provider>
-                <Component1 />
+            <Data.Provider value={name}>
+                <Data1.Provider value={age}>
+                    <Component1 /> 
+                </Data1.Provider>
             </Data.Provider>
         </div>
     )
