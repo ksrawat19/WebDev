@@ -25,11 +25,18 @@ body {
   margin-top: 5rem;
 }
 
-.increment, .decrement, .reset {
+.increment, .decrement {
   padding: 10px 20px;
   border-radius: 50%;
   font-size: 2rem;
   background: #141517;
   color: #fff;
   cursor: pointer;
+}
+
+.reset {
+  font-size: 2rem;
+  background: #141517;
+  color: #fff;
+  padding: 10px 20px;
 }
