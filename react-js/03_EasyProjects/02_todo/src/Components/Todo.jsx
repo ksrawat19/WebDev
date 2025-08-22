@@ -1,39 +1,52 @@
-import { useState } from "react"
+import { useState } from "react";
+import "../index.css";
 
-const Todo = () => {
-
-    const [todos, setTodo] = useState([]);
-    const [input, setInput] = useState('');
-
-    const submitHandler = ()=>{
-        setTodo([...todos, input]);
-        setInput('');
-    }
-
-    function removeTodo(id) {
-    setTodo((prevTodos) => prevTodos.filter((_, i) => i !== id));
-    }
-
-    return (
-        <div>
-            <div>
-                <input 
-                    type="text"
-                    placeholder="New Task"
-                    value={input}
-                    onChange={(e)=>setInput(e.target.value)}
-                />
-                <button onClick={submitHandler}>Submit</button>
-            </div>
-            <ul>{
-                  todos.map((todo, index)=>(
-                        <li key={index}>
-                            <span>{todo}</span>
-                            <button onClick={()=>removeTodo(index)}>x</button>
-                        </li>
-                  ))
-              }</ul>
-        </div>
-    )
+function generateId() {
+  return Math.floor(Math.random() * 10);
 }
-export default Todo
+
+function Todo() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState("");
+
+  const handleSubmit = () => {
+    if (!input.trim()) return;
+    setTodos((todos) =>
+      todos.concat({
+        text: input,
+        id: generateId(),
+      })
+    );
+    setInput("");
+  };
+
+  const removeTodo = (id) =>
+    setTodos((todos) => todos.filter((t) => t.id !== id));
+
+  return (
+    <div className="container">
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="New Todo"
+        className="todoInput"
+      />
+
+      <button onClick={handleSubmit}>Submit</button>
+
+      <ul className="todos-list">
+        {todos.map(({ text, id }) => (
+          <li key={id} className="todo">
+            <span>{text}</span>
+            <button className="close" onClick={() => removeTodo(id)}>
+              X
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Todo;
