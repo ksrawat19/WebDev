@@ -1,0 +1,67 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container for testimonials */
+.testimonial-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+}
+
+/* Quote styling */
+.testimonial-quote {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
+}
+
+/* Author styling */
+.testimonial-author {
+  font-size: 1rem;
+  font-style: italic;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+/* Button container */
+.testimonial-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Navigation buttons */
+.testimonial-controls button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.testimonial-controls button:hover {
+  background-color: #155ab6;
+  transform: scale(1.05);
+}
