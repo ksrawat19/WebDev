@@ -3,15 +3,15 @@ import Price from "./Price/Price.jsx"
 import Colors from "./Colors/Colors.jsx"
 import "../../style/sidebar.css"
 
-const Sidebar = () => {
+const Sidebar = ({radioHandler}) => {
     return (
         <section className="sidebar"> 
             <div className="logo-container">
                 <h1>🛒</h1>
             </div>
-            <Category />
-            <Price />
-            <Colors />
+            <Category radioHandler={radioHandler} />
+            <Price radioHandler={radioHandler} />
+            <Colors radioHandler={radioHandler} />
         </section>
     )
 }

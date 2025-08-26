@@ -1,23 +1,7 @@
 import "../../style/product.css";
 import Cards from "../Cards";
 
-const Product = () => {
-    return <section className="card-container">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-    </section>;
+const Product = ({ result }) => {
+    return <section className="card-container">{result}</section>;
 };
 export default Product;
