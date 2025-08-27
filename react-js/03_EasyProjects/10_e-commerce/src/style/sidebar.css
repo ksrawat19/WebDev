@@ -1,18 +1,74 @@
 .sidebar {
-  width: 15%;
+  width: clamp(160px, 18vw, 200px);
   position: fixed;
-  height: 100%;
-  border-right: 2px solid #e5e5e5;
-  z-index: 3;
+  top: 65px; /* Below navbar */
+  left: 0;
+  height: calc(100vh - 65px);
+  background: linear-gradient(180deg, #ffffff 0%, #f8f1e9 100%);
+  border-right: 1px solid #ffd700;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  z-index: 998;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  animation: slideIn 0.5s ease-out;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
 }
 
-.logo-container {
-  margin-bottom: 4rem;
+.sidebar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
-.logo-container h1 {
-  margin-top: 1.3rem;
+/* Optional: Section divider */
+.sidebar-divider {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, #ec4899, #fb923c);
+  margin: 1rem auto;
+  opacity: 0.4;
+}
+
+/* Optional: Sidebar item styling */
+.sidebar-item {
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: #1e3a8a;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-item:hover {
+  color: #fb923c;
+  transform: translateX(4px);
+}
+
+/* Animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .sidebar {
+    width: clamp(140px, 20vw, 160px);
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .sidebar {
+    width: clamp(100px, 25vw, 120px);
+    padding: 1rem 0.5rem;
+  }
+
+  .sidebar-item {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
 }
