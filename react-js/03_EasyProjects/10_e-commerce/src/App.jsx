@@ -11,20 +11,18 @@ const App = () => {
     const [query, setQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState(null);
 
-    // handle input filer
     const inputHandler = (e) => {
         setQuery(e.target.value);
     };
+
     const filteredItems = products.filter((product) =>
         product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
     );
 
-    // radio filter
     const radioHandler = (e) => {
         setSelectedCategory(e.target.value);
     };
 
-    // buttoon filter
     const buttonHandler = (e) => {
         setSelectedCategory(e.target.value);
     };
@@ -32,7 +30,6 @@ const App = () => {
     function filterData(products, selected, query) {
         let filteredProduct = products;
 
-        // filtering inputs
         if (query) {
             filteredProduct = filteredItems;
         }
@@ -62,15 +59,23 @@ const App = () => {
             )
         );
     }
+
     const result = filterData(products, selectedCategory, query);
 
     return (
         <>
-            <Sidebar radioHandler={radioHandler} />
             <Navigation query={query} inputHandler={inputHandler} />
-            <Recommended buttonHandler={buttonHandler} />
-            <Product result={result} />
+            <div className="app-container">
+                <div className="sidebar-wrapper">
+                    <Sidebar radioHandler={radioHandler} />
+                </div>
+                <div className="main-content">
+                    <Recommended buttonHandler={buttonHandler} />
+                    <Product result={result} />
+                </div>
+            </div>
         </>
     );
 };
+
 export default App;

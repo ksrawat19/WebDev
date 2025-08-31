@@ -1,74 +1,65 @@
 .sidebar {
-  width: clamp(160px, 18vw, 200px);
-  position: fixed;
-  top: 65px; /* Below navbar */
-  left: 0;
-  height: calc(100vh - 65px);
-  background: linear-gradient(180deg, #ffffff 0%, #f8f1e9 100%);
-  border-right: 1px solid #ffd700;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
-  z-index: 998;
+  width: 196px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F1E9 80%);
+  border-right: 1px solid #FFD700;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
+  padding: 0.75rem 0.5rem;
   animation: slideIn 0.5s ease-out;
-  overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE */
 }
 
-.sidebar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
-}
-
-/* Optional: Section divider */
-.sidebar-divider {
-  width: 60%;
-  height: 1px;
-  background: linear-gradient(to right, #ec4899, #fb923c);
-  margin: 1rem auto;
-  opacity: 0.4;
-}
-
-/* Optional: Sidebar item styling */
-.sidebar-item {
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
-  color: #1e3a8a;
-  font-family: 'Inter', sans-serif;
+.logo-container {
   margin-bottom: 1rem;
-  cursor: pointer;
+  text-align: center;
+}
+
+.logo-container h1 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.sidebar-item:hover {
-  color: #fb923c;
-  transform: translateX(4px);
+.logo-container h1:hover {
+  color: #FFD700;
+  transform: scale(1.05);
 }
 
-/* Animation */
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
+  from { opacity: 0; transform: translateX(-10px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* Tablet */
 @media (max-width: 768px) {
   .sidebar {
-    width: clamp(140px, 20vw, 160px);
-    padding: 1.5rem 0.75rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .logo-container {
+    margin-bottom: 0.75rem;
+  }
+
+  .logo-container h1 {
+    font-size: 1rem;
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .sidebar {
-    width: clamp(100px, 25vw, 120px);
-    padding: 1rem 0.5rem;
+    padding: 0.4rem;
   }
 
-  .sidebar-item {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  .logo-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .logo-container h1 {
+    font-size: 0.9rem;
   }
 }
